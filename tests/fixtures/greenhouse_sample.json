@@ -1,0 +1,54 @@
+{
+  "jobs": [
+    {
+      "absolute_url": "https://job-boards.greenhouse.io/gleanwork/jobs/4621972005",
+      "data_compliance": [
+        {
+          "type": "gdpr",
+          "requires_consent": false,
+          "requires_processing_consent": false,
+          "requires_retention_consent": false,
+          "retention_period": null,
+          "demographic_data_consent_applies": false
+        }
+      ],
+      "internal_job_id": 4400984005,
+      "location": {
+        "name": "Australia"
+      },
+      "metadata": null,
+      "id": 4621972005,
+      "updated_at": "2026-04-08T17:21:40-04:00",
+      "requisition_id": "759",
+      "title": "AI Outcomes Manager, ANZ",
+      "company_name": "Glean",
+      "first_published": "2025-11-04T01:21:03-05:00",
+      "language": "en"
+    },
+    {
+      "absolute_url": "https://job-boards.greenhouse.io/gleanwork/jobs/4661912005",
+      "data_compliance": [
+        {
+          "type": "gdpr",
+          "requires_consent": false,
+          "requires_processing_consent": false,
+          "requires_retention_consent": false,
+          "retention_period": null,
+          "demographic_data_consent_applies": false
+        }
+      ],
+      "internal_job_id": 4419659005,
+      "location": {
+        "name": "Nashville, TN"
+      },
+      "metadata": null,
+      "id": 4661912005,
+      "updated_at": "2026-04-08T17:21:42-04:00",
+      "requisition_id": "891",
+      "title": "AI Outcomes Manager, Central",
+      "company_name": "Glean",
+      "first_published": "2026-02-13T17:26:56-05:00",
+      "language": "en"
+    }
+  ]
+}

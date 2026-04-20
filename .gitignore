@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.DS_Store
+*.egg-info/
+# staging files from ATS discovery
+ashby_*_full.json
+gh_*_full.json

@@ -1,0 +1,16 @@
+[project]
+name = "job-scraper"
+version = "0.1.0"
+description = "Scheduled job board scraper with email + ntfy notifications"
+requires-python = ">=3.11"
+dependencies = [
+    "requests>=2.32",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
