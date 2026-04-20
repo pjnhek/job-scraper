@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-from scraper.sources import _parse_ashby, _parse_greenhouse
+from scraper.sources import COMPANIES, PARSERS, URL_TEMPLATES, _parse_ashby, _parse_greenhouse
 
 FIX = Path(__file__).parent / "fixtures"
 
@@ -42,3 +42,20 @@ def test_greenhouse_infers_remote_from_location_string():
     }
     jobs = _parse_greenhouse(raw, "Co")
     assert jobs[0]["remote"] is True
+
+
+def test_companies_have_required_fields_and_supported_ats():
+    for company in COMPANIES:
+        assert {"name", "ats", "slug"} <= company.keys()
+        assert company["name"]
+        assert company["slug"]
+        assert company["ats"] in PARSERS
+        assert company["ats"] in URL_TEMPLATES
+
+
+def test_companies_are_unique_by_name_and_ats_slug_pair():
+    names = [company["name"] for company in COMPANIES]
+    ats_slug_pairs = [(company["ats"], company["slug"]) for company in COMPANIES]
+
+    assert len(names) == len(set(names))
+    assert len(ats_slug_pairs) == len(set(ats_slug_pairs))
