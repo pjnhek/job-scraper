@@ -5,6 +5,7 @@ description = "Scheduled job board scraper with email + ntfy notifications"
 requires-python = ">=3.11"
 dependencies = [
     "requests>=2.32",
+    "pyyaml>=6.0",
 ]
 
 [dependency-groups]

@@ -2,21 +2,28 @@ from __future__ import annotations
 
 import logging
 from datetime import datetime, timezone
+from pathlib import Path
 from typing import Any, Iterable
 
 import requests
+import yaml
 
 log = logging.getLogger(__name__)
 
 TIMEOUT = 30
 
+COMPANIES_YAML = Path(__file__).resolve().parent.parent / "companies.yaml"
 
-COMPANIES: list[dict[str, str]] = [
-    {"name": "Perplexity", "ats": "ashby", "slug": "perplexity"},
-    {"name": "Glean", "ats": "greenhouse", "slug": "gleanwork"},
-    {"name": "Notion", "ats": "ashby", "slug": "notion"},
-    {"name": "Dropbox", "ats": "greenhouse", "slug": "dropbox"},
-]
+
+def load_companies(path: Path = COMPANIES_YAML) -> list[dict[str, str]]:
+    with path.open() as f:
+        data = yaml.safe_load(f) or []
+    if not isinstance(data, list):
+        raise ValueError(f"{path} must contain a YAML list of companies")
+    return data
+
+
+COMPANIES: list[dict[str, str]] = load_companies()
 
 
 def _ms_epoch_to_iso(ms: int | str | None) -> str:

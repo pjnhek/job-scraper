@@ -6,6 +6,7 @@ on:
       - ".github/workflows/*.yml"
       - "pyproject.toml"
       - "uv.lock"
+      - "companies.yaml"
       - "scraper/**/*.py"
       - "tests/**/*.py"
   pull_request:
@@ -13,6 +14,7 @@ on:
       - ".github/workflows/*.yml"
       - "pyproject.toml"
       - "uv.lock"
+      - "companies.yaml"
       - "scraper/**/*.py"
       - "tests/**/*.py"
   workflow_dispatch:

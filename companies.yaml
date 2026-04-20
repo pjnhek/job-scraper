@@ -1,0 +1,39 @@
+# Companies to scrape for job postings.
+#
+# How to add a new company:
+#   1. Find the company's careers page and identify which ATS (applicant
+#      tracking system) powers it. Look at the URL of the jobs page or
+#      "apply" button — the domain usually gives it away:
+#        - jobs.ashbyhq.com/<slug>              -> ats: ashby
+#        - boards.greenhouse.io/<slug>          -> ats: greenhouse
+#        - jobs.lever.co/<slug>                 -> ats: lever
+#        - jobs.smartrecruiters.com/<slug>      -> ats: smartrecruiters
+#      Only these four ATSs are supported (see scraper/sources.py PARSERS).
+#
+#   2. The `slug` is the company identifier in that URL. Examples:
+#        - https://jobs.ashbyhq.com/notion              -> slug: notion
+#        - https://boards.greenhouse.io/dropbox         -> slug: dropbox
+#        - https://jobs.lever.co/netflix                -> slug: netflix
+#
+#   3. Verify the slug works by opening the public API URL in a browser.
+#      If you get JSON back (not a 404), the slug is correct:
+#        - ashby:           https://api.ashbyhq.com/posting-api/job-board/<slug>
+#        - greenhouse:      https://boards-api.greenhouse.io/v1/boards/<slug>/jobs
+#        - lever:           https://api.lever.co/v0/postings/<slug>?mode=json
+#        - smartrecruiters: https://api.smartrecruiters.com/v1/companies/<slug>/postings
+#
+#   4. Add a new entry below with `name` (display name), `ats`, and `slug`.
+#      Each (ats, slug) pair and each `name` must be unique.
+#
+- name: Perplexity
+  ats: ashby
+  slug: perplexity
+- name: Glean
+  ats: greenhouse
+  slug: gleanwork
+- name: Notion
+  ats: ashby
+  slug: notion
+- name: Dropbox
+  ats: greenhouse
+  slug: dropbox
