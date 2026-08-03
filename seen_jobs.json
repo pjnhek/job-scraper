@@ -1,7 +1,7 @@
 {
   "greenhouse:4006735005": {
     "company": "Glean",
-    "posted_at": "2026-05-14T15:35:24-04:00",
+    "posted_at": "2026-08-03T17:41:21-04:00",
     "title": "Machine Learning Engineer, Search Quality",
     "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4006735005"
   },
@@ -28,5 +28,11 @@
     "posted_at": "2026-06-25T11:11:26-04:00",
     "title": "Machine Learning Engineer, LLM Evals & Observability",
     "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4694716005"
+  },
+  "greenhouse:4711484005": {
+    "company": "Glean",
+    "posted_at": "2026-08-03T17:43:08-04:00",
+    "title": "Machine Learning Engineer, Assistant Quality",
+    "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4711484005"
   }
 }
